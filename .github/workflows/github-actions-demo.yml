@@ -14,5 +14,8 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Make a manifest file if it does not exist
+        run:
+          >>${{github.workspace}}/manifest.json
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
