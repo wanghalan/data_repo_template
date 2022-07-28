@@ -16,6 +16,16 @@ jobs:
           >>${{github.workspace}}/manifest.json
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}    
+          ls ${{ github.workspace }}
+      - name: Commit files
+        run: |
+          git config --local user.name "robot"
+          git add .
+          git commit -m "Automated manifest update"
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true          
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
