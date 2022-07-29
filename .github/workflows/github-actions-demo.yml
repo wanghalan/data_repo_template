@@ -20,7 +20,7 @@ jobs:
           python-version: 3.8 #install the python needed
       - name: execute py script # create a manifest
         run: |
-          python hello_world.py
+          python .github/workflows/hello_world.py
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
