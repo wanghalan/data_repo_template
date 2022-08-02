@@ -14,5 +14,5 @@ git config --global submodule.recurse true
 - [ ] See if you can generate an html page using a python virtual environment and plotly
 
 ## References:
-References:
 - [GitHub submodules](https://github.blog/2016-02-01-working-with-submodules/)
+- [Notes](https://www.overleaf.com/read/nqwzsywgcdgn)
