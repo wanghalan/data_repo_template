@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Audit Data Repository
 on: [push]
 jobs:
   Explore-GitHub-Actions:
