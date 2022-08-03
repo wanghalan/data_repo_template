@@ -4,6 +4,10 @@
 ```shell
 git config --global submodule.recurse true
 ```
+For whatever reason the above does not work, the fool-proof command is:
+```
+git submodule update --init --recursive
+```
 
 ## To do:
 - [x] Run example runner
