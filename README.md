@@ -4,7 +4,7 @@
 ```shell
 git config --global submodule.recurse true
 ```
-For whatever reason the above does not work, the fool-proof command is:
+The above might not work if you made local changes to the submodule, so the fool-proof command is to call to get the most recent updates as needed
 ```
 git submodule update --init --recursive
 ```
