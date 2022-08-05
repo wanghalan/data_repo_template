@@ -130,7 +130,3 @@ dmypy.json
 
 # Mac artifacts
 *.DS_Store
-
-
-# Submodule to be cloned
-sdad_data-auditor/*
