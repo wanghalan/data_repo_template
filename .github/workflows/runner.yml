@@ -15,11 +15,11 @@ jobs:
         with:
           repository: yaoeh/sdad_data-auditor
           path: sdad_data-auditor/
-      - run: echo "🌝 The auditor is now cloned on the runner"
+      - run: echo "🌝 The auditor is now cloned on the runner"        
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          ls -Rla ${{ github.workspace }}
+          ls -Rla ${{ github.workspace }}      
       - name: setup python
         uses: actions/setup-python@v4
         with:
@@ -27,6 +27,9 @@ jobs:
       - name: execute py script # create a manifest with the current directory as root
         run: |
           python sdad_data-auditor/audit.py -i .
+      - name: Remove auditor
+        run: |
+          rm -rf sdad_data-auditor         
       - name: Commit files
         run: |
           git config --local user.name "robot"
